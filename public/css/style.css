@@ -1,4 +1,4 @@
-body{
+/* body{
     margin: 0;
 }
 
@@ -52,9 +52,9 @@ form {
         height: 7em;
         margin: 2em;
     }
-}
+} */
 
-.header {
+header {
     height:100wh;
     background-Image:url('../assets/header.jpeg');
     background-position: center;
@@ -70,4 +70,17 @@ header button{
     border: 2px solid white;
     color: white;
     padding:5px;
+    font-size:26px;
+}
+#reservation{
+    background-image: url('../assets/header.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#reservation h1{
+    color: white;
+}
+#reservation label{
+    font-weight: bold;
 }
