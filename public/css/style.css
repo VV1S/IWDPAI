@@ -53,3 +53,21 @@ form {
         margin: 2em;
     }
 }
+
+.header {
+    height:100wh;
+    background-Image:url('../assets/header.jpeg');
+    background-position: center;
+    background-size: cover;
+}
+nav{
+    background: transparent;
+    border-bottom: 2px solid white;
+}
+
+header button{
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding:5px;
+}
