@@ -1,4 +1,4 @@
-/* body{
+body{
     margin: 0;
 }
 
@@ -29,7 +29,34 @@ form {
     align-items: center;
     width: 80%;
     height: 40vh;
+
+    background: #FFFFFFE0 0% 0% no-repeat padding-box;
+    box-shadow: 0px 6px 6px #00000029;
+    border: 1px solid #707070;
+    border-radius: 33px;
 }
+
+button {
+    background: transparent linear-gradient(180deg, #7B0101 0%, #450A0A 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 19px;
+    width: 50%;
+    border: none;
+    color: white;
+    margin: 1em;
+    line-height: 2.5em;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid gray;
+    padding: 1em;
+    margin: 1em;
+    width: 50%;
+}
+
+
 
 @media only screen and (max-device-width: 420px){
     .container {
@@ -52,8 +79,8 @@ form {
         height: 7em;
         margin: 2em;
     }
-} */
-
+}
+/*
 header {
     height:100wh;
     background-Image:url('../assets/header.jpeg');
@@ -83,4 +110,4 @@ header button{
 }
 #reservation label{
     font-weight: bold;
-}
+} */
