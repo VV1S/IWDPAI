@@ -107,7 +107,7 @@ car-name-text{
     line-height: 2.5em;
 }
 
-input {
+input, textarea {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid gray;
@@ -140,34 +140,14 @@ input {
         margin: 2em;
     }
 }
-/*
-header {
-    height:100wh;
-    background-Image:url('../assets/header.jpeg');
-    background-position: center;
-    background-size: cover;
-}
-nav{
-    background: transparent;
-    border-bottom: 2px solid white;
+
+section.car-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-header button{
-    background: transparent;
-    border: 2px solid white;
-    color: white;
-    padding:5px;
-    font-size:26px;
+.car-form > form{
+    display: flex;
+    flex-direction: column;
 }
-#reservation{
-    background-image: url('../assets/header.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-#reservation h1{
-    color: white;
-}
-#reservation label{
-    font-weight: bold;
-} */

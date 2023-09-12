@@ -25,6 +25,11 @@
                     <car-name-text>FORD EXPLORER</car-name-text>
                     <button>AVAILABLE FROM 14.09.2023</button>
                 </car>
+                <car>
+                    <img src="public/uploads/<?= $car->getImage() ?>">
+                    <car-name-text><?= $car->getTitle() ?></car-name-text>
+                    <button><?= $car->getDescription() ?></button>
+                </car>
             </available-cars>
         </div>
     </body>
