@@ -26,13 +26,12 @@ class BookingController extends AppController {
         }
 
         $car_name = $_POST['car_name'];
+        $this->bookingRepository->makeUnavailable($car_name);
         self::setCarId($this->bookingRepository->getID($car_name));
         $baseCost = $this->bookingRepository->getCost($car_name);
 
         $client_id = self::getUserId();
         $car_id = self::getCarId();
-//        $client_id = $_POST['client_id'];
-//        $car_id = $_POST['car_id'];
         $from_date = $_POST['date'];
         $to_date_temp = new DateTime($from_date);
         $hours = $_POST['hours'];
@@ -46,6 +45,7 @@ class BookingController extends AppController {
         $booking = new Booking($client_id, $car_id, $from_date, $to_date, $cost);
 
         $this->bookingRepository->addBooking($booking);
+
 
         return $this->render('login', ['messages' => ['A new redervation was added!']]);
     }

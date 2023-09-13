@@ -14,6 +14,14 @@
                     <car>
                         <img src="public/uploads/<?= $newCar->getPhoto() ?>">
                         <car-name-text><?= $newCar->getName() ?></car-name-text>
+                        <car-name-text><?= $newCar->getType() ?></car-name-text>
+                        <car-name-text>PRICE: <?= $newCar->getPrice() ?>PLN PER DAY</car-name-text>
+                        <?php if ($newCar->getAvailable()): ?>
+                            <car-name-text>AVAILABLE</car-name-text>
+                        <?php else: ?>
+                            <car-name-text>UNAVAILABLE FROM <?=$newCar->getUnavailableTimeFrom($newCar->getName()) ?> </car-name-text>
+                        <car-name-text>TO <?=$newCar->getUnavailableTimeTo($newCar->getName()) ?></car-name-text>
+                        <?php endif; ?>
                     </car>
                 <?php endforeach; ?>
             </available-cars>

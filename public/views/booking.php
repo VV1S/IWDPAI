@@ -27,12 +27,12 @@
                 <customer-data>
                     <left>
                         <input name="name" type = "text" placeholder="NAME">
-                        <input name="phone_number" type = "text" placeholder="000-000-00">
+                        <input type="text" id="numerTelefonu" name="phone_number" inputmode="numeric" pattern="[0-9]{9}" maxlength="9" required placeholder="000-000-00">
                         <input name="car_name" type = "text" placeholder="CAR NAME">
                     </left>
                     <right>
                         <input name="surname" type = "text" placeholder="SURNAME">
-                        <input name="date" type = "date" placeholder="DATE">
+                        <input type="date" name="date" min="<?php echo date('Y-m-d'); ?>" required placeholder="DATE">
                         <renting-time>
                             <input name="days" type = "number" min="0" placeholder="DAYS">
                             <input type="number" name="hours" min="0" max="23" step="1" placeholder="HOURS">

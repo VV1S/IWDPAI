@@ -27,7 +27,11 @@
         <input name="name" type="text" placeholder="name">
         <input name="type" type="text" placeholder="type">
         <input name="price" type="text" placeholder="price">
-        <input name="available" type="checkbox" placeholder="available" value="1">
+        <available-cars>
+            <newText>available </newText>
+            <input name="available" type="checkbox" placeholder="available" value="1">
+        </available-cars>
+
 <!--        <textarea name="description" rows=5 placeholder="description"></textarea>-->
 
         <input type="file" name="file"/><br/>

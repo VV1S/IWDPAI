@@ -116,6 +116,15 @@ input, textarea {
     width: 50%;
 }
 
+newText{
+    background-color: transparent;
+    border: none;
+    padding: 1em;
+    margin: 1em;
+    width: 50%;
+}
+
+
 
 
 @media only screen and (max-device-width: 420px){
