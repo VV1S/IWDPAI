@@ -16,7 +16,6 @@ class CarRepository extends Repository
         $stmt->execute();
 
         $car = $stmt->fetch(PDO::FETCH_ASSOC);
-
         if ($car == false) {
             return null;
         }

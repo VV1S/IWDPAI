@@ -14,9 +14,9 @@
                     <car>
                         <img src="public/uploads/<?= $newCar->getPhoto() ?>">
                         <car-name-text><?= $newCar->getName() ?></car-name-text>
-                        <button><?= $newCar->getPrice() ?></button>
                     </car>
                 <?php endforeach; ?>
             </available-cars>
+<!--            <button>CHOOSE CAR</button>-->
         </div>
     </body>

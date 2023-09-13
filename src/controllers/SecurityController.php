@@ -40,6 +40,7 @@ class SecurityController extends AppController {
 
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/cars");
+        self::setUserId($this->userRepository->getID($email));
     }
 
     public function register()
@@ -63,9 +64,8 @@ class SecurityController extends AppController {
         $user = new User($email, md5($password), $name, $surname);
         $user->setPhone($phone);
 
-        $userRepository = new UserRepository();
         $this->userRepository->addUser($user);
 
-        return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
+        return $this->render('cars', ['messages' => ['You\'ve been succesfully registrated!']]);
     }
 }

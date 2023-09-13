@@ -12,8 +12,18 @@
             <div class="logo">
                 <img src="public/img/logo.svg">
             </div>
+            <div class="messages">
+                <?php
+                if(isset($messages)){
+                    foreach($messages as $message) {
+                        echo $message;
+                    }
+                }
+                ?>
+            </div>
             <book-text>BOOK A CAR</book-text>
-            <booking-form>
+
+                <form action="booking" method="POST" ENCTYPE="multipart/form-data">
                 <customer-data>
                     <left>
                         <input name="name" type = "text" placeholder="NAME">
@@ -22,14 +32,14 @@
                     </left>
                     <right>
                         <input name="surname" type = "text" placeholder="SURNAME">
-                        <input name="term" type = "date" placeholder="DATE">
+                        <input name="date" type = "date" placeholder="DATE">
                         <renting-time>
-                            <input name="days" type = "number" placeholder="DAYS">
-                            <input name="hours" type = "number" placeholder="HOURS">   
+                            <input name="days" type = "number" min="0" placeholder="DAYS">
+                            <input type="number" name="hours" min="0" max="23" step="1" placeholder="HOURS">
                         </renting-time>                    
                     </right>
                 </customer-data>
-                <button>BOOK</button>
-            </booking-form>
+                <button type ="submit">BOOK</button>
+                </form>
         </div>
     </body>
