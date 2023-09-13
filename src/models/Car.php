@@ -1,44 +1,68 @@
 <?php
 
 class Car {
-    private $title;
-    private $description;
-    private $image;
+    private $name;
+    private $type;
+    private $price;
+    private $available;
+    private $photo_url;
 
-    public function __construct($title, $description, $image)
+    public function __construct($name, $type, $price, $available, $photo_url)
     {
-        $this->title = $title;
-        $this->description = $description;
-        $this->image = $image;
+        $this->name = $name;
+        $this->type = $type;
+        $this->price = $price;
+        $this->available = $available;
+        $this->photo_url = $photo_url;
     }
 
-    public function getTitle()
+    public function getName()
     {
-        return $this->title;
+        return $this->name;
     }
 
-    public function setTitle($title)
+    public function setName($name)
     {
-        $this->title = $title;
+        $this->name = $name;
     }
 
-    public function getDescription()
+    public function getType()
     {
-        return $this->description;
+        return $this->type;
     }
 
-    public function setDescription($description)
+    public function setType($type)
     {
-        $this->description = $description;
+        $this->type = $type;
     }
 
-    public function getImage()
+    public function getPrice()
     {
-        return $this->image;
+        return $this->price;
     }
 
-    public function setImage($image)
+    public function setPrice($price)
     {
-        $this->image = $image;
+        $this->price = $price;
+    }
+
+    public function getAvailable()
+    {
+        return $this->available;
+    }
+
+    public function setAvailable($available)
+    {
+        $this->available = $available;
+    }
+
+    public function getPhoto()
+    {
+        return $this->photo_url;
+    }
+
+    public function setPhoto($photo_url)
+    {
+        $this->photo_url = $photo_url;
     }
 }

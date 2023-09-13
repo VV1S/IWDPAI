@@ -2,6 +2,7 @@
 
 require_once 'AppController.php';
 require_once __DIR__ . '/../models/Car.php';
+require_once __DIR__.'/../repository/CarRepository.php';
 
 class CarController extends AppController {
 
@@ -10,6 +11,19 @@ class CarController extends AppController {
     const UPLOAD_DIRECTORY = '/../public/uploads/';
 
     private $message = [];
+    private $carRepository;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->carRepository = new CarRepository();
+    }
+
+    public function cars(){
+        $cars = $this->carRepository->getCars();
+        $this->render('cars', ['cars' => $cars]);
+    }
+
     public function addCar()
     {
 //        $this->render('addCar');
@@ -20,9 +34,10 @@ class CarController extends AppController {
             );
 
             // TODO create new project object and save it in database
-            $car = new Car($_POST['title'], $_POST['description'], $_FILES['file']['name']);
+            $car = new Car($_POST['name'], $_POST['type'], $_POST['price'], (isset($_POST["available"]) && ($_POST["available"] == "1")) ,$_FILES['file']['name']);
+            $this->carRepository->addCar($car);
 
-            return $this->render('cars', ['messages' => $this->message, 'car' => $car]);
+            return $this->render('cars', [ 'messages' => $this->message, 'cars' => $this->carRepository->getCars()]);
         }
         return $this->render('addCar', ['messages' => $this->message]);
     }

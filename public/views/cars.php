@@ -10,26 +10,13 @@
                 <img src="public/img/logo.svg">
             </div>
             <available-cars>
-                <car>
-                    <img src="public/assets/fiat.jpg" class="card" alt="Car" srcest="">
-                    <car-name-text>FIAT 500</car-name-text>
-                    <button>AVAILABLE FROM 14.09.2023</button>
-                </car>
-                <car>
-                    <img src="public/assets/audi.jpg" class="card" alt="Car" srcest="">
-                    <car-name-text>AUDI Q6</car-name-text>
-                    <button>AVAILABLE FROM 14.09.2023</button>
-                </car>
-                <car>
-                    <img src="public/assets/ford.jpg" class="card" alt="Car" srcest="">
-                    <car-name-text>FORD EXPLORER</car-name-text>
-                    <button>AVAILABLE FROM 14.09.2023</button>
-                </car>
-                <car>
-                    <img src="public/uploads/<?= $car->getImage() ?>">
-                    <car-name-text><?= $car->getTitle() ?></car-name-text>
-                    <button><?= $car->getDescription() ?></button>
-                </car>
+                <?php foreach ($cars as $newCar): ?>
+                    <car>
+                        <img src="public/uploads/<?= $newCar->getPhoto() ?>">
+                        <car-name-text><?= $newCar->getName() ?></car-name-text>
+                        <button><?= $newCar->getPrice() ?></button>
+                    </car>
+                <?php endforeach; ?>
             </available-cars>
         </div>
     </body>

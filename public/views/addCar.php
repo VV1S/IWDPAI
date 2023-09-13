@@ -24,8 +24,11 @@
             }
             ?>
         </div>
-        <input name="title" type="text" placeholder="title">
-        <textarea name="description" rows=5 placeholder="description"></textarea>
+        <input name="name" type="text" placeholder="name">
+        <input name="type" type="text" placeholder="type">
+        <input name="price" type="text" placeholder="price">
+        <input name="available" type="checkbox" placeholder="available" value="1">
+<!--        <textarea name="description" rows=5 placeholder="description"></textarea>-->
 
         <input type="file" name="file"/><br/>
         <button type="submit">send</button>

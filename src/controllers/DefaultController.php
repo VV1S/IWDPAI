@@ -7,10 +7,6 @@ class DefaultController extends AppController {
         $this->render('login');
     }
 
-    public function cars(){
-        $this->render('cars');
-    }
-
     public function booking(){
         $this->render('booking');
     }
